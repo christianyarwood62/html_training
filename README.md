@@ -1,1 +1,1 @@
-# html_training
+# This is a repository full of training and practice using html 
