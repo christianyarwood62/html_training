@@ -6,34 +6,48 @@
     </head>
 
     <body>
-        <!-- <a> is a tag that creates a link to an html, or even videos, pdf, images, etc.
+        <!-- <a> is an anchor tag that creates a link to an html, or even videos, pdf, images, etc.
             <a> needs a destination, use href to add a hypertext reference attribute.
             An attribute is made of 2 parts:a name, and value. however not all attributes require a value -->
         <p><a href="https://www.theodinproject.com/about">About The Odin Project</a></p>
         
-        <!-- To create a link in another tab: add a target attribute to tag.
+        <!-- To create a link in another tab: add a target attribute inside anchor tag <a>
          The rel attribute is used to describe the relation between current page and linked page.
          The noopener attribute ensures link opened in new tab cant interact with original page, ensures security.
          The noreferrer attribute provides privacy and security, by preventing new page from knowing where the user came from and also include behaviour of noopener
          It is best practice to use target="_blank" with a rel="noopener noreferrer" -->
-        <p><a href="https://www.theodinproject.com/about" target="blank" rel="noopener noreferrer">About The Odin Project</a></P>
+        <p><a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a></P>
 
         <p>
             <!-- absolute links: links to pages on other website, typically made of following parts: scheme://domain/path. 
-             An absolute link will always contain the scheme and domain of the destination.
-             The previous example was an example of an absolute link -->
+            An absolute link will always contain the scheme and domain of the destination.
+            The previous example was an example of an absolute link -->
 
-             <!-- Relative links: links to other pages within our own website.
-              Relative links dont include the domain name since its on the same website. They only include the file path to the other page. -->
-              <body>
+            <!-- Relative links: links to other pages within our own website.
+            Relative links dont include the domain name since its on the same website. They only include the file path to the other page. -->
                 <h1>Homepage</h1>
                 <a href="https://www.theodinproject.com/about">About The Odin Project</a>
-              <!-- Because the about.html file is in a different repository, it has to include the pages/ directory since that is the new location of the about file relative to the index file -->
+            
+            <!-- Because the about.html file is in a different repository, it has to include the pages/ directory since that is the new location of the about file relative to the index file -->
                 <a href="pages/about.html">About</a>
 
-                <!-- You can avoid issues with broken links by prepending "./" before the link so it specifies looking for the file/directory relative to the current directory -->
+            <!-- You can avoid issues with broken links by prepending "./" before the link so it specifies looking for the file/directory relative to the current directory -->
                 <a href="./pages/about.html">About</a>
-              </body>
-              
-            </p>
+        </p>
+
+        <p> 
+            <!-- You can add images by using closed element <img> (meaning there is no closign tag e.g. </img>).
+             You can use attribute "src" to tell where the browser file is located (it can embded an image using both relative and absolute paths) -->
+             <img src="https://www.theodinproject.com/mstile-310x310.png"> 
+         </p>
+        
+        <p>
+            <!-- You can use the alt attribute after to describe the image if it cant be loaded -->
+            <img src="./images/dog.jpg" alt="A dog">
+        </p>
+
+        <p>
+            <!-- It is good practice to use image size attributes after to layout the page without causing the page to jump and flash -->
+            <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" height="310" width="310"> 
+        </p>
     </body>
